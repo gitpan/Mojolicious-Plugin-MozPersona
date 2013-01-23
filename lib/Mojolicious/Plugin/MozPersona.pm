@@ -1,7 +1,7 @@
 
 package Mojolicious::Plugin::MozPersona;
 {
-  $Mojolicious::Plugin::MozPersona::VERSION = '0.01_01';
+  $Mojolicious::Plugin::MozPersona::VERSION = '0.01';
 }
 
 # ABSTRACT: Minimalistic integration of Mozillas "Persona" authentication system in Mojolicious apps
@@ -149,7 +149,7 @@ Mojolicious::Plugin::MozPersona - Minimalistic integration of Mozillas "Persona"
 
 =head1 VERSION
 
-version 0.01_01
+version 0.01
 
 =head1 SYNOPSIS
 
