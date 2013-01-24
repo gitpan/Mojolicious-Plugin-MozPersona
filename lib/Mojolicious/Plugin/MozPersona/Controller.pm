@@ -3,7 +3,7 @@ use warnings;
 
 package Mojolicious::Plugin::MozPersona::Controller;
 {
-  $Mojolicious::Plugin::MozPersona::Controller::VERSION = '0.01';
+  $Mojolicious::Plugin::MozPersona::Controller::VERSION = '0.02';
 }
 
 # ABSTRACT: Default implementation for server side functions for "Persona" authentication.
@@ -100,7 +100,7 @@ Mojolicious::Plugin::MozPersona::Controller - Default implementation for server 
 
 =head1 VERSION
 
-version 0.01
+version 0.02
 
 =head1 DESCRIPTION
 

@@ -1,7 +1,7 @@
 
 package Mojolicious::Plugin::MozPersona;
 {
-  $Mojolicious::Plugin::MozPersona::VERSION = '0.01';
+  $Mojolicious::Plugin::MozPersona::VERSION = '0.02';
 }
 
 # ABSTRACT: Minimalistic integration of Mozillas "Persona" authentication system in Mojolicious apps
@@ -149,7 +149,7 @@ Mojolicious::Plugin::MozPersona - Minimalistic integration of Mozillas "Persona"
 
 =head1 VERSION
 
-version 0.01
+version 0.02
 
 =head1 SYNOPSIS
 
@@ -376,7 +376,7 @@ None.
 =head1 EXTRA FILES
 
 The following files are part of this distribution and are available via
-the these URL paths:
+these URL paths:
 
   /_persona/email_sign_in_black.png
   /_persona/email_sign_in_blue.png
@@ -389,7 +389,13 @@ the these URL paths:
   /_persona/plain_sign_in_blue.png
   /_persona/plain_sign_in_red.png
 
-(see L<Mozilla Persona Branding resources|https://developer.mozilla.org/en-US/docs/persona/branding>)
+The images were created by members of the Mozilla Developer Network and are
+available at L<Mozilla Persona Branding resources|https://developer.mozilla.org/en-US/docs/persona/branding>.
+(c) 2012 by Mozilla Developer Network and / or the individual contributors.
+
+The CSS was created by Sawyer Hollenshead and is also available at
+L<Mozilla Persona Branding resources|https://developer.mozilla.org/en-US/docs/persona/branding>.
+(c) 2012 by Sawyer Hollenshead.
 
 The following template is part of this distribution:
 

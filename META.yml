@@ -15,4 +15,6 @@ name: Mojolicious-Plugin-MozPersona
 requires:
   IO::Socket::SSL: 1.75
   Mozilla::CA: 20130114
-version: 0.01
+resources:
+  repository: https://github.com/heikojansen/mojolicious-plugin-mozpersona.git
+version: 0.02
