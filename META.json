@@ -22,6 +22,7 @@
       "runtime" : {
          "requires" : {
             "IO::Socket::SSL" : "1.75",
+            "Mojolicious" : "2.00",
             "Mozilla::CA" : "20130114"
          }
       }
@@ -34,6 +35,6 @@
          "web" : "https://github.com/heikojansen/mojolicious-plugin-mozpersona"
       }
    },
-   "version" : "0.02"
+   "version" : "0.03"
 }
 

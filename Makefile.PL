@@ -21,9 +21,10 @@ my %WriteMakefileArgs = (
   "NAME" => "Mojolicious::Plugin::MozPersona",
   "PREREQ_PM" => {
     "IO::Socket::SSL" => "1.75",
+    "Mojolicious" => "2.00",
     "Mozilla::CA" => 20130114
   },
-  "VERSION" => "0.02",
+  "VERSION" => "0.03",
   "test" => {
     "TESTS" => "t/*.t"
   }
