@@ -3,7 +3,7 @@ use warnings;
 
 package Mojolicious::Plugin::MozPersona::Controller;
 {
-  $Mojolicious::Plugin::MozPersona::Controller::VERSION = '0.03';
+  $Mojolicious::Plugin::MozPersona::Controller::VERSION = '0.04';
 }
 
 # ABSTRACT: Default implementation for server side functions for "Persona" authentication.
@@ -27,9 +27,9 @@ sub signin {
     my $result = '';
 
     eval {
-        $persona_response = $self->ua->post_form(
+        $persona_response = $self->ua->post(
            $self->stash('_persona_service')
-           => {
+           => form => {
                 assertion => $self->param('assertion'),
                 audience  => $self->stash('_persona_audience'), 
            }
@@ -90,9 +90,11 @@ sub js {
 
 1;
 
-
+__END__
 
 =pod
+
+=encoding UTF-8
 
 =head1 NAME
 
@@ -100,7 +102,7 @@ Mojolicious::Plugin::MozPersona::Controller - Default implementation for server 
 
 =head1 VERSION
 
-version 0.03
+version 0.04
 
 =head1 DESCRIPTION
 
@@ -110,8 +112,6 @@ from L<Mojolicious::Controller>.
 
 This module must provide (directly or via inheritance) implementations
 of three methods: C<signin>, C<signout> and C<js>.
-
-=encoding utf8
 
 =head1 NAME
 
@@ -230,19 +230,25 @@ L<Mojolicious::Plugin::MozPersona>,
 L<https://developer.mozilla.org/en-US/docs/Persona>,
 L<Mojolicious>.
 
-=head1 AUTHOR
+=head1 AUTHORS
+
+=over 4
+
+=item *
 
 Heiko Jansen <hjansen@cpan.org>
 
+=item *
+
+Moritz Lenz <moritz@cpan.org>
+
+=back
+
 =head1 COPYRIGHT AND LICENSE
 
-This software is copyright (c) 2013 by Heiko Jansen.
+This software is copyright (c) 2014 by Heiko Jansen.
 
 This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.
 
 =cut
-
-
-__END__
-

@@ -10,7 +10,7 @@ use ExtUtils::MakeMaker 6.30;
 
 my %WriteMakefileArgs = (
   "ABSTRACT" => "Minimalistic integration of Mozillas \"Persona\" authentication system in Mojolicious apps",
-  "AUTHOR" => "Heiko Jansen <hjansen\@cpan.org>",
+  "AUTHOR" => "Heiko Jansen <hjansen\@cpan.org>, Moritz Lenz <moritz\@cpan.org>",
   "BUILD_REQUIRES" => {},
   "CONFIGURE_REQUIRES" => {
     "ExtUtils::MakeMaker" => "6.30"
@@ -24,24 +24,25 @@ my %WriteMakefileArgs = (
     "Mojolicious" => "2.00",
     "Mozilla::CA" => 20130114
   },
-  "VERSION" => "0.03",
+  "TEST_REQUIRES" => {},
+  "VERSION" => "0.04",
   "test" => {
     "TESTS" => "t/*.t"
   }
 );
 
 
-unless ( eval { ExtUtils::MakeMaker->VERSION(6.56) } ) {
-  my $br = delete $WriteMakefileArgs{BUILD_REQUIRES};
-  my $pp = $WriteMakefileArgs{PREREQ_PM};
-  for my $mod ( keys %$br ) {
-    if ( exists $pp->{$mod} ) {
-      $pp->{$mod} = $br->{$mod} if $br->{$mod} > $pp->{$mod};
-    }
-    else {
-      $pp->{$mod} = $br->{$mod};
-    }
-  }
+my %FallbackPrereqs = (
+  "IO::Socket::SSL" => "1.75",
+  "Mojolicious" => "2.00",
+  "Mozilla::CA" => 20130114
+);
+
+
+unless ( eval { ExtUtils::MakeMaker->VERSION(6.63_03) } ) {
+  delete $WriteMakefileArgs{TEST_REQUIRES};
+  delete $WriteMakefileArgs{BUILD_REQUIRES};
+  $WriteMakefileArgs{PREREQ_PM} = \%FallbackPrereqs;
 }
 
 delete $WriteMakefileArgs{CONFIGURE_REQUIRES}

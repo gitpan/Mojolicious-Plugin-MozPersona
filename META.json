@@ -1,10 +1,11 @@
 {
    "abstract" : "Minimalistic integration of Mozillas \"Persona\" authentication system in Mojolicious apps",
    "author" : [
-      "Heiko Jansen <hjansen@cpan.org>"
+      "Heiko Jansen <hjansen@cpan.org>",
+      "Moritz Lenz <moritz@cpan.org>"
    ],
    "dynamic_config" : 0,
-   "generated_by" : "Dist::Zilla version 4.300028, CPAN::Meta::Converter version 2.120921",
+   "generated_by" : "Dist::Zilla version 5.006, CPAN::Meta::Converter version 2.133380",
    "license" : [
       "perl_5"
    ],
@@ -35,6 +36,6 @@
          "web" : "https://github.com/heikojansen/mojolicious-plugin-mozpersona"
       }
    },
-   "version" : "0.03"
+   "version" : "0.04"
 }
 

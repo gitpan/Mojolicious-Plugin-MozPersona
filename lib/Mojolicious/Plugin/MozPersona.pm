@@ -1,7 +1,7 @@
 
 package Mojolicious::Plugin::MozPersona;
 {
-  $Mojolicious::Plugin::MozPersona::VERSION = '0.03';
+  $Mojolicious::Plugin::MozPersona::VERSION = '0.04';
 }
 
 # ABSTRACT: Minimalistic integration of Mozillas "Persona" authentication system in Mojolicious apps
@@ -89,7 +89,7 @@ sub register {
             $head_block .= '<link href="/_persona/persona-buttons.css" media="screen" rel="stylesheet" type="text/css" />';
         }
         if ( $conf{'autoHook'}->{'jquery'} ) {
-            $head_block .= '<script src="/js/jquery.js" type="text/javascript"></script>';
+            $head_block .= '<script src="/mojo/jquery/jquery.js" type="text/javascript"></script>';
         }
 
         my $end_block = '';
@@ -139,9 +139,11 @@ sub register {
 
 1;
 
-
+__END__
 
 =pod
+
+=encoding UTF-8
 
 =head1 NAME
 
@@ -149,7 +151,7 @@ Mojolicious::Plugin::MozPersona - Minimalistic integration of Mozillas "Persona"
 
 =head1 VERSION
 
-version 0.03
+version 0.04
 
 =head1 SYNOPSIS
 
@@ -208,8 +210,6 @@ and some CSS that provides common styling rules for the signin/signout elements
 Please note that you´re advised to read the
 L<Persona documentation|https://developer.mozilla.org/en-US/docs/Persona> before 
 using this plugin.
-
-=encoding utf8
 
 =head1 NAME
 
@@ -296,7 +296,7 @@ This option is deactivated (set to C<0>) by default.
 =item jquery
 
 Include the jQuery JavaScript Library that is part of the Mojolicious distribution
-by inserting an appropriate C<E<lt>script src="/js/jquery.js"E<gt>> element.
+by inserting an appropriate C<E<lt>script src="/mojo/jquery/jquery.js"E<gt>> element.
 
 =item persona
 
@@ -408,19 +408,25 @@ L<https://developer.mozilla.org/en-US/docs/Persona>,
 L<Mojolicious>,
 L<Mozilla::Persona>.
 
-=head1 AUTHOR
+=head1 AUTHORS
+
+=over 4
+
+=item *
 
 Heiko Jansen <hjansen@cpan.org>
 
+=item *
+
+Moritz Lenz <moritz@cpan.org>
+
+=back
+
 =head1 COPYRIGHT AND LICENSE
 
-This software is copyright (c) 2013 by Heiko Jansen.
+This software is copyright (c) 2014 by Heiko Jansen.
 
 This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.
 
 =cut
-
-
-__END__
-
